@@ -1,0 +1,65 @@
+.sidepanel {
+  position: fixed;
+  left: 20px;
+  top: 400px;
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
+
+  &__text {
+    width: 120px;
+    height: 120px;
+    font-size: 14px;
+
+    span {
+      display: flex;
+      transform: rotate(-90deg) translateX(-50px);
+    }
+  }
+
+  &__divider {
+    width: 1px;
+    height: 165px;
+    background-color: #000;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    &:not(&:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  &__show {
+    display: block !important;
+    animation-name: fade;
+    animation-duration: 0.5s;
+  }
+
+  &__hide {
+    display: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,102 @@
+.offer {
+  padding: 70px 0;
+  position: relative;
+  text-align: center;
+
+  @media screen and (max-width: 576px) {
+    padding: 70px 0 40px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    @media screen and (max-width: 576px) {
+      gap: unset;
+    }
+  }
+  &__text {
+    flex: 1 580px;
+  }
+  &__descr {
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 576px) {
+      margin-top: 30px;
+    }
+  }
+  &__advantages {
+    flex: 1 300px;
+    margin-top: 50px;
+
+    @media screen and (max-width: 576px) {
+      margin-top: 0;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 70px;
+      }
+    }
+    &-text {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 21px;
+    }
+  }
+  &__slider {
+    max-width: 650px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &-counter {
+      display: flex;
+      max-width: 200px;
+      align-items: center;
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    &-wrapper {
+      width: 100%;
+      margin-top: 15px;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    }
+    &-prev {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    &-next {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    #current {
+      font-size: 48px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+  &__slide {
+    width: 100%;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
